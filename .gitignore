@@ -1,4 +1,9 @@
-build/
-bin/*
 .cache/
 .vscode/
+build/
+
+lib/*
+bin/*
+
+!lib/.gitkeep
+!bin/.gitkeep
