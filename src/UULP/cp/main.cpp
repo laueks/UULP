@@ -1,3 +1,4 @@
+// Copyright 2023 laueks
 #include "cp.h"
 
 int main(int argc, char *argv[]) {
