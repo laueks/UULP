@@ -1,18 +1,26 @@
-#ifndef __UULP_H__
-#define __UULP_H__
+// Copyright 2023 laueks
+#ifndef SRC_UULP_UULP_H_
+#define SRC_UULP_UULP_H_
 
-#include <cstdint>
+#include <dirent.h>
 #include <fcntl.h>
+#include <grp.h>
+#include <pwd.h>
 #include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include <unistd.h>
 #include <utmp.h>
 
+#include <cstdint>
 #include <cstdio>
 #include <cstdlib>
 #include <ctime>
-#include <sys/stat.h>
-#include <sys/types.h>
+#include <iostream>
+#include <string>
+
+#include <boost/algorithm/string.hpp>
 
 void ErrorExit(const char *msg, int status = 1);
 
-#endif
+#endif // SRC_UULP_UULP_H_
