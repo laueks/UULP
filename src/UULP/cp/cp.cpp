@@ -1,12 +1,13 @@
-#include "UULP/UULP.h"
+// Copyright 2023 laueks
+#include "UULP/cp/cp.h"
 
-// TODO: 实现对目录的拷贝
+// TODO(laueks) : 实现对目录的拷贝
 void Copy(const char *src, const char *dst) {
   int src_fd = open(src, O_RDONLY, nullptr);
   struct stat sbuf;
   if ((stat(src, &sbuf)) == -1) {
     char msg[BUFSIZ] = {'\0'};
-    sprintf(msg, "cannot open %s", src);
+    snprintf(msg, sizeof(msg) / sizeof(msg[0]), "cannot open %s", src);
     ErrorExit(msg);
   }
   if (src_fd == -1) {
